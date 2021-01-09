@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    Velocidade do carro: <input type="number" name="" id="ctxt">
+    <input type="button" value="press me" id="bt" onclick="verificação()">
+    <div id="res"></div>
+</body>
+<script>
+
+    function verificação(){
+        var ctxt = document.getElementById('ctxt')
+        var vel = Number(ctxt.value)
+        var res = document.querySelector('div#res') 
+        res.innerHTML = `<p>sua velocidade é ${vel} Km/h  </p>`
+        if (vel > 60) {
+            res.innerHTML += `<p>você está sendo <strong>MULTADO</strong> por excesso de velocidade</p>`
+        } else {
+            res.innerHTML += `<p>você está dentro dos limites de velocidade</p>` 
+        }
+        res.innerHTML += `<p>dirija sempre com cinto de segurança</p>`
+        
+    }
+</script>
+</html>
