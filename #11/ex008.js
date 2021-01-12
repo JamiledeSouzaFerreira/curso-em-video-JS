@@ -1,3 +1,4 @@
+//análise de saldo
 var saldo = -1
 console.log (`Seu saldo é de ${saldo} reais atualmente.`)
 if (saldo < 0){
